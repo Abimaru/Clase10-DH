@@ -1,302 +1,269 @@
-/* Estilo principal*/
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;    
+/* Estilo principal
+    viewport width vw
+    viewport height vh
+*/
+
+body{
+    font-family: 'Roboto', sans-serif;
 }
 
-html {
-    /* Clase 10 */
-    position: relative;
-    width: 1024px;
-    height: 1024px;
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
 
-    background: #FFFFFF;
+a{
+    text-decoration: none;
+    color: #FFFFFF;
 }
 
 /*Estilos del header*/
-.descuentos{
-    /* Descuentos */
-    position: absolute;
-    width: 1024px;
-    height: 38px;
-    left: 0px;
-    top: 0px;
 
+
+header div.primerBloque {
     background: #1CD1B0;
 }
 
-.descText{
-    position: absolute;
-    width: 111px;
-    height: 18px;
-    left: 10px;
-    top: 10px;
-
-    font-family: 'Roboto', sans-serif;
+header div.primerBloque p{
+    padding-left: 20px;
     font-style: normal;
     font-weight: normal;
     font-size: 15px;
     line-height: 18px;
+    text-align: left;
     color: #000000;
 }
 
-.heroes{
-    /* Heroes */
-    position: absolute;
-    width: 1024px;
-    height: 101px;
-    left: 0px;
-    top: 38px;
-
+header div.segundoBloque {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 20px;
     background: #00669F;
-    box-shadow: 0px 10px 7px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);   
 }
 
-.heroesText{
-    position: absolute;
-    width: 128px;
-    height: 47px;
-    left: 28px;
-    top: 25px;
-
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 40px;
-    line-height: 47px;
-    color: #000000;
-}
-/*Estilos del main*/
-
-.heart1, .heart2, .heart3{
-    position: relative;
-    left: 7%;
-    right: 0%;
-    top: 8.25%;
-    bottom: 6.25%;    
-    font-size: 30px;
-    color: #CC2424;
-}
-
-.personajes{
-    position: relative;
-    width: 960px;
-    height: 532px;
-    left: 0px;
-    top: 290px;
-}
-
-.batmanCont1, .harleyCont, .batmanCont2{
-    position: absolute;
-    width: 300px;
-    height: 529px;
-}
-
-.batman1, .harley, .batman2{
-    position: absolute;
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    z-index: 10;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
-
-.batmanFondo1, .harleyFondo, .batmanFondo2{
-    position: static;
-    width: 300px;
-    height: 193px;
-    border-radius: 16px 16px 0px 0px;
-}
-
-.batmanMidCont1, .harleyMidCont, .batmanMidCont2{
-    position: static;
-    width: 300px;
-    height: 336px;
-
-    background: #F3F3F3;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.batTitulo1, .harleyTitulo, .batTitulo2{
-    position: absolute;
-    width: 122px;
-    height: 35px;
-
-    font-family: Roboto;
+header div.segundoBloque h1{
+    padding-left: 20px;
     font-style: normal;
     font-weight: normal;
     font-size: 30px;
     line-height: 35px;
-    display: flex;
-    align-items: flex-end;
-    text-align: center;
-
-    color: #000000;
+    text-align: left;    
+    color: #FFFFFF;
 }
 
-.batText1, .harleyText, .batText2{
-    position: absolute;
-    width: 267px;
-    height: 113px;
+header div.tercerBloque {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-right: 20px;
+    background: #001D2D;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
+}
 
-    font-family: Roboto;
+header div.tercerBloque span{
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
     line-height: 19px;
-
-    color: #333333;
-}
-.btnVer1, .btnVer2, .btnVer3{
-    position: absolute;
-    width: 128.78px;
-    height: 48.52px;
-
-    background: #00669F;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 15px;
-    line-height: 18px;
     text-align: center;
 
+    color: #FFFFFF;
+}
+header div.tercerBloque span{
+    display: flex;
+    justify-content: space-evenly;
+    flex-grow: 0.1;
+}
+
+/*Estilos del main*/
+
+main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 50px;
+}
+
+main section.heroes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-grow: 1;
+}
+
+main section.heroes select.cuadros{
+    display: flex;
+}
+
+
+main section.heroes section div.batman, div.harley {
+    display: flex;    
+    background: #C4C4C4;
+    /*border-radius: 50px;    */
+    border-top-left-radius: 23px;
+    border-top-right-radius: 23px;
+    background-image: url("../img/fondo1.png");
+    background-repeat: no-repeat;
+    background-size: 300px 195px;
+    width: 300px;
+    height: 195px;
+
+}
+
+main section.heroes div.harley {
+    background-image: url("../img/fondo2.png");
+    background-repeat: no-repeat;
+}
+
+main section.heroes section div.batmanText, div.harleyText {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    background: #F3F3F3;
+    z-index: 1;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 10px;
+    padding-top: 70px;
+    width: 300px;
+    height: 350px;
+    top: -154px;
+}
+
+main section.heroes section div p.titulo {
+    display:flex;
+    align-items: center;    
+    font-size: 25px;
+    line-height: 30px;
+    text-align: center;
+    color: #000000;
+
+}
+
+main section.heroes section div p.texto {
+    display:flex;
+    align-items: center;    
+    font-size: 15px;
+    line-height: 21px;
+    text-align: justify;
+    color: #333333;
+}
+
+main section.heroes section div button {
+    display:flex;
+    align-items: center;
+    width: 80px;
+    height: 42px;
+    background: #00669F;
+    border-radius: 7px;
+    font-size: 15px;
+    line-height: 21px;
+    text-align: justify;
     color: #F3F3F3;
 }
 
-.batmanCont1{    
-    left: 32px;
-    top: 0px;
-} 
-
-.batman1{
-    left: 90px;
-    top: 160px;
-
+main section.heroes section img {
+    position:relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    z-index: 2;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    top: calc(50% - (75px / 2));
+    top: -70px;
+    left: calc(50% - (150px / 2));
 }
 
-.batmanFondo1{
-    left: 32px;
-    top: 291px;
-    background: url("../img/fondo1.png");
+main section.heroes section img.super {
+    position:relative;
 }
 
-.batmanMidCont1{
-    left: 32px;
-    top: 483px;
+.heart {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 20px;
+    padding-top: 20px;
+    font-size: 30px;
+    color: red;
 }
 
-.btnVer1{
-    left: 80px;
-    top: 480px;
-}
-.batTitulo1{
-    left: 91px;
-    top: 290px;
-} 
-
-.batText1{
-    left: 18px;
-    top: 340px;
-}
-
-.harleyCont{
-    left: 362px;
-    top: 2px;
-} 
-
-.harley{
-    left: 90px;
-    top: 160px;
-}
-
-.harleyFondo{
-    left: 362px;
-    top: 293px;
-    background: url("../img/fondo2.png");
-}
-
-.harleyMidCont{
-    left: 362px;
-    top: 485px;
-}
-
-.harleyTitulo{
-    width: 171px;
-    height: 35px;
-    left: 61px;
-    top: 290px;
-} 
-
-.harleyText{
-    left: 18px;
-    top: 340px;
-}
-
-.btnVer2{
-    left: 80px;
-    top: 480px;
-}
-
-.batmanCont2 {
-    left: 692px;
-    top: 3px;
-}
-
-.batman2{
-    left: 90px;
-    top: 160px;
- }
-.batmanFondo2{
-    left: 692px;
-    top: 294px;
-    background: url("../img/fondo1.png");
-}
-
-.batmanMidCont2{
-    left: 692px;
-    top: 486px;
-}
-
-.batTitulo2{
-    left: 91px;
-    top: 290px;
-}
-
-.batText2{
-    left: 18px;
-    top: 340px;
-}
-
-.btnVer3{
-    left: 80px;
-    top: 480px;
-}
-
-/*Estilos del footer*/
-footer{
-    position: absolute;
-    width: 1024px;
-    height: 51px;
-    left: 0px;
-    top: 972px;
-
+main section.heroes div.mas{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 82px;
+    height: 82px;    
+    border-radius: 50%;
     background: #00669F;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 62px;
+    line-height: 73px;
+    color: #FFFFFF;
 }
 
-.textFooter{
-    position: absolute;
-    width: 337px;
-    height: 19px;
-    left: 16px;
-    top: 20px;
-
-    font-family: 'Roboto', sans-serif;
+/* Estilos del footer */
+footer div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #00669F;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);    
+    height: 61px;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
     line-height: 19px;
     text-align: center;
     color: #FFF9F9;
+}
+
+/* Media Queries */
+
+@media (max-width: 1250px) {
+    /* Tablets */
+    
+
+}
+
+@media (max-width: 730px){
+    /* Celulares */
+    main section.heroes {
+        width: 90%;
+        flex-direction: column;
+    }
+
+    main section.heroes section.cuadros {
+        width: 90%;
+    }
+
+    main section.heroes section.cuadros div {
+        width: 90%;
+        background-repeat: no-repeat;
+        background-size: auto;
+    }
+    main section.heroes section img {
+        top: -70px;
+        left: calc(45% - (150px / 2));
+    }
+
+    footer {
+        flex-direction: column;
+        align-content: center;
+        justify-content: space-evenly;
+    }
+
+    footer p {
+        flex-grow: 0;
+        text-align: center;
+        font-size: 25px;
+    }
 }
